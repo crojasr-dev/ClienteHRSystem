@@ -1,4 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+export interface PersonaList {
+  ID: number;
+  nombre: string;
+  rut: string;
+  idCargo: number;
+  cargo:string;
+}
+
+import { Component, Input, OnInit } from '@angular/core';
 import { HttpClient } from "@angular/common/http";
 
 @Component({
@@ -11,23 +19,30 @@ export class ListaEvaluadosComponent implements OnInit {
 
   constructor(private peticion: HttpClient) { }
   ngOnInit(): void {
-   this.ObtenerDatos();
+    this.ObtenerDatos();
   }
-  empleados: Persona[] = [];
+
+  empleados: PersonaList[] = [];
+
+  showFormulario: number = 0;
+
+  @Input() caca:string='';
+  
+  // valor:string="valor local";
 
   ObtenerDatos() {
-    // this.peticion.get('http://hrapp.developman.net/Api/Personas')
-    this.peticion.get<Persona[]>('https://localhost:44336//Api/Personas')
+    this.peticion.get<PersonaList[]>('https://localhost:44374/api/Persona')
       .subscribe(data => {
-        this.empleados = data.sort();
+        this.empleados = data;
+        console.log(this.empleados);
       })
+    return this.empleados;
   }
 
-}
-export interface Persona {
-  ID: number;
-  NOMBRE: string;
-  RUT: string;
-  AREA: string;
-  CARGO: string;
+  mostrarFormulario(e: PersonaList): void {
+    this.showFormulario=e.idCargo;
+    console.log(e.idCargo);
+    
+  }
+
 }

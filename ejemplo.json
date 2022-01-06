@@ -1,0 +1,37 @@
+[
+    {
+        "ID": 1,
+        "NOMBRE": "Rojas Aguilera Salvador Valentin",
+        "RUT": "27003843-3",
+        "AREA": "Tecnología",
+        "CARGO": "Ingeniero en tetas"
+    },
+    {
+        "ID": 2,
+        "NOMBRE": "Aguilera Palma Ivonne Melany",
+        "RUT": "15917633-9",
+        "AREA": "Administración",
+        "CARGO": "Psicóloga"
+    },
+    {
+        "ID": 3,
+        "NOMBRE": "Rojas Rojas Cristian Andres",
+        "RUT": "13754820-8",
+        "AREA": "Tecnología",
+        "CARGO": "Desarrollador de software"
+    },
+    {
+        "ID": 4,
+        "NOMBRE": "zasasasa",
+        "RUT": "27003843-3",
+        "AREA": "Tecnología",
+        "CARGO": "Ingeniero en minas"
+    },
+    {
+        "ID": 5,
+        "NOMBRE": "Emilia Maria Rojas Reyes",
+        "RUT": "27003843-3",
+        "AREA": "Tecnología",
+        "CARGO": "Ingeniera en abrazos"
+    }
+]

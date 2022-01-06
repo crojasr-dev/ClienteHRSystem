@@ -4,15 +4,17 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { CabeceraComponent } from './cabecera/cabecera.component';
 import { ListaEvaluadosComponent } from './lista-evaluados/lista-evaluados.component';
-import { FormularioComponent } from './formulario/formulario.component';
 import { HttpClientModule } from '@angular/common/http';
+import { Form1Component } from './form1/form1.component';
+import { Form2Component } from './form2/form2.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CabeceraComponent,
     ListaEvaluadosComponent,
-    FormularioComponent,
+    Form1Component,
+    Form2Component,
   ],
   imports: [
     BrowserModule,

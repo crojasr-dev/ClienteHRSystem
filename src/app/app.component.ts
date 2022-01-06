@@ -7,5 +7,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'clienteapphr';
-  lala='esta es la wea';
+  valor='https://zenprospect-production.s3.amazonaws.com/uploads/pictures/605d42bf03df7f0001d80a2c/picture';
+  
 }
