@@ -8,6 +8,7 @@ export interface PersonaList {
 
 import { Component, Input, OnInit } from '@angular/core';
 import { HttpClient } from "@angular/common/http";
+import { ApiManagerService } from '../services/api-manager.service';
 
 @Component({
   selector: 'app-lista-evaluados',
@@ -17,27 +18,18 @@ import { HttpClient } from "@angular/common/http";
 
 export class ListaEvaluadosComponent implements OnInit {
 
-  constructor(private peticion: HttpClient) { }
-  ngOnInit(): void {
-    this.ObtenerDatos();
+  constructor(private apiman:ApiManagerService) { }
+  ngOnInit() {
+   this.apiman.ObtenerEmpleados()
+   .subscribe(res=>{
+     console.log(res);
+     
+   });
   }
 
   empleados: PersonaList[] = [];
 
   showFormulario: number = 0;
-
-  @Input() caca:string='';
-  
-  // valor:string="valor local";
-
-  ObtenerDatos() {
-    this.peticion.get<PersonaList[]>('https://localhost:44374/api/Persona')
-      .subscribe(data => {
-        this.empleados = data;
-        console.log(this.empleados);
-      })
-    return this.empleados;
-  }
 
   mostrarFormulario(e: PersonaList): void {
     this.showFormulario=e.idCargo;

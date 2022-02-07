@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ApirequestService } from '../services/apirequest.service';
 
 @Component({
   selector: 'app-cabecera',
@@ -6,8 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styles: [
   ]
 })
-export class CabeceraComponent  {
+export class CabeceraComponent {
 
-  evaluador='Melany Aguilera';
+  evaluador = 'Melany Aguilera';
 
 }
